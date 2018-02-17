@@ -10,7 +10,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.set('view engine', 'hbs');
 
-
+const port = process.env.PORT || 3000;
 
 app.use((req,res,next)=>{ // middleware
 var now = new Date().toString();
@@ -69,6 +69,6 @@ res.send({errormessage : 'unable to connect'});
 
 });
 
-app.listen(3000,()=>{
-  console.log('server is up on port 3000');
+app.listen(port,()=>{
+  console.log(`server is up on port ${port}`);
 });
