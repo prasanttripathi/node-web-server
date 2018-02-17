@@ -25,6 +25,12 @@ next(); // app won't run until next is called ,it will be in loading state ,next
 
 });
 
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle : 'Projects'
+  });
+});
+
 // app.use((req,res,next)=>{
 //   res.render('maintenance.hbs');
 // });
